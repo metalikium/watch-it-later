@@ -31,17 +31,21 @@ class MovieController extends \BaseController {
 	 */
 	public function store()
 	{
-		Movie::create([
-			'title'       => $faker->sentence(),
-			'year'        => $faker->year($max = 'now'),
-			'poster_url'  => $faker->image($dir = 'public/img', $width = 125, $height = 200),
-			'description' => $faker->paragraph(2),
-			'director'    => $faker->name(),
-			'stars'       => $faker->name().', '.$faker->name(),
-			'note'        => $faker->numberBetween($min = 0, $max = 5),
-			'genre'       => $faker->sentence(1),
-			'watched'     => $faker->boolean($chanceOfGettingTrue = 30),
-		]);
+		$movie              = new Movie();
+		
+		$movie->title       = Input::get('movie_title'); 
+		$movie->year        = Input::get('movie_year');
+		$movie->description = Input::get('movie_description');
+		$movie->director    = Input::get('movie_director');
+		$movie->stars       = Input::get('movie_stars');
+		$movie->genre       = Input::get('movie_genre');
+		
+		// Poster
+		$img                = Input::file('movie_poster');		
+		$filename           = $img->getClientOriginalName();		
+		$movie->poster_url  = $filename;
+
+		return Response::json(array('success' => true));
 	}
 
 
@@ -89,7 +93,9 @@ class MovieController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		Movie::destroy($id);
+
+		return Response::json(array('success' => true));
 	}
 
 
