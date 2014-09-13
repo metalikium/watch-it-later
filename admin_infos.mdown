@@ -1,0 +1,5 @@
+### Admin Infos
+
+db_name : watchitlater
+db_user : adminwil
+db_pass : yBaBdufY

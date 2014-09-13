@@ -1,0 +1,278 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"max",
+				"max_num"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 203.0,
+		"selected_items":
+		[
+			[
+				"synjs",
+				"Set Syntax: JSON"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"listp",
+				"Package Control: List Packages"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"synht",
+				"Set Syntax: HTML"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"listpack",
+				"Package Control: List Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"list pack",
+				"Package Control: List Packages"
+			],
+			[
+				"synhtml",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 601.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/metalikium/sites/laravel/app/controllers/PhonesController.php",
+		"/etc/host",
+		"/Users/metalikium/sites/angularjs/angularjs.sublime-workspace",
+		"/Users/metalikium/sites/aeon/aeon.sublime-project",
+		"/Users/metalikium/sites/aeon/index.php",
+		"/Users/metalikium/sites/aeon/index.html",
+		"/Users/metalikium/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/metalikium/angularjs/index.html",
+		"/Users/metalikium/angularjs/bower_components/bootstrap/dist/css/bootstrap.min.css",
+		"/Users/metalikium/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/Users/metalikium/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/metalikium/art_graffiti.txt",
+		"/Users/metalikium/.bashrc",
+		"/Users/metalikium/art_ivrit.txt",
+		"/Users/metalikium/art_big.txt",
+		"/Users/metalikium/art_doom.txt",
+		"/Users/metalikium/art_slant.txt",
+		"/Users/metalikium/art_rectangles.txt",
+		"/Users/metalikium/art_bell.txt",
+		"/Users/metalikium/art_small.txt",
+		"/Applications/MAMP/htdocs/_test/foundation/scss/app.scss",
+		"/private/etc/hosts",
+		"/Applications/MAMP/conf/apache/httpd.conf",
+		"/Users/metalikium/Documents/cr_av-diams_31052014",
+		"/Users/metalikium/Documents/locations.txt",
+		"/Applications/MAMP/htdocs/_test/foundation/Gruntfile.js",
+		"/Users/metalikium/Downloads/mbadolato-iTerm2-Color-Schemes-f5db66f/README.md",
+		"/Applications/MAMP/htdocs/_cms/dtest/sites/all/modules/custom/current_posts/current_posts.info"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"start",
+			"span",
+			"task",
+			"endtime",
+			"starttime",
+			"description",
+			"name",
+			"'",
+			"·",
+			"'",
+			"',\n",
+			"	\n",
+			"');\n",
+			"font",
+			"reviewCtrl",
+			"reviewCtrl.review.body",
+			"reviewCtrl.",
+			" -->",
+			"2",
+			"1",
+			"tab ===",
+			"tab === ",
+			"ng-click",
+			"ng",
+			"panel",
+			"Description",
+			"div",
+			"store.",
+			";\n",
+			"________________________________________________________________",
+			"\"\"",
+			"\"",
+			"color",
+			"BCD42A",
+			"FF5D38",
+			"8998b9",
+			"6e7a94",
+			"26A6A6",
+			"2b303b",
+			"dee3ec",
+			"272b34",
+			"26A6A6",
+			"current_posts_block_view",
+			"current_posts_max",
+			"MySQL",
+			"-----",
+			"\n-----",
+			"-----\n",
+			"dtest"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/metalikium/sites/angulartuts/untitled.sublime-project"
+			],
+			[
+				"me",
+				"/Users/metalikium/sites/metalikium.github.io/metalikium.github.io.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 302.0,
+	"status_bar_visible": true
+}
