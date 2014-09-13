@@ -14,7 +14,7 @@ class MoviesTableSeeder extends Seeder {
 			Movie::create([
 				'title'       => $faker->sentence(),
 				'year'        => $faker->year($max = 'now'),
-				'poster_url'  => $faker->image($dir = 'public/img', $width = 125, $height = 200),
+				'poster_url'  => str_replace('public', '', $faker->image($dir = 'public/img', $width = 125, $height = 200)),
 				'description' => $faker->paragraph(2),
 				'director'    => $faker->name(),
 				'stars'       => $faker->name().', '.$faker->name(),

@@ -14,7 +14,7 @@
 				<h3 class="movie__title">%%movie.title%%</h3>
 				<span class="movie__year">%%movie.year%%</span>
 
-				<img src="%%movie.poster_url%%" alt="%%movie.title%%" />
+				<img ng-src="%%movie.poster_url%%" alt="%%movie.title%%" />
 
 				<div class="movie__description">
 					%%movie.description%%
