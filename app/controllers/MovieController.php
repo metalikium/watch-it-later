@@ -9,7 +9,7 @@ class MovieController extends \BaseController {
 	 */
 	public function index()
 	{
-		return Response::json(Movie::get());
+		return Response::json(Movie::orderBy('id', 'desc')->get());
 	}
 
 
@@ -31,19 +31,29 @@ class MovieController extends \BaseController {
 	 */
 	public function store()
 	{
+		/*
 		$movie              = new Movie();
 		
 		$movie->title       = Input::get('movie_title'); 
 		$movie->year        = Input::get('movie_year');
 		$movie->description = Input::get('movie_description');
 		$movie->director    = Input::get('movie_director');
-		$movie->stars       = Input::get('movie_stars');
+		//$movie->stars       = Input::get('movie_stars');
 		$movie->genre       = Input::get('movie_genre');
 		
 		// Poster
 		$img                = Input::file('movie_poster');		
 		$filename           = $img->getClientOriginalName();		
 		$movie->poster_url  = $filename;
+		*/
+
+		Movie::create(array(
+			'title'       => Input::get('title'),
+			'year'        => Input::get('year'),
+			'description' => Input::get('description'),
+			'director'    => Input::get('director'),
+			'genre'       => Input::get('genre'),
+		));
 
 		return Response::json(array('success' => true));
 	}
@@ -57,7 +67,7 @@ class MovieController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		return Response::json(Movie::find($id));
 	}
 
 

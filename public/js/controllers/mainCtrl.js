@@ -24,7 +24,7 @@ angular.module('mainCtrl', [])
 			});
 		};
 
-		$scope.years = listYears;
+		$scope.years = listYears.reverse();
 
 		// get all the movies first and bind it to the $scope.movies object
 		// use the function we created in our service
@@ -45,12 +45,8 @@ angular.module('mainCtrl', [])
 			Movie.save($scope.movieData)
 				.success(function(data) {
 
-					// if successful, we'll need to refresh the movie list
-					Movie.get()
-						.success(function(getData) {
-							$scope.movies = getData;
-							$scope.loading = false;
-						});
+					// redirect to homepage
+					window.location = '/';
 
 				})
 				.error(function(data) {

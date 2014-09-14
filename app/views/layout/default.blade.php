@@ -16,19 +16,19 @@
 	<nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
 		<ul class="nav navmenu-nav">
 			<span class="navmenu-brand">Menu</span>
-			<li><a href="{{ url('create-movie') }}"><span class="fa fa-film">Create Movie</span></a></li>
+			<li><a href="{{ url('/create-movie') }}"><span class="fa fa-film">Create Movie</span></a></li>
 			<li><a href="#">Item 2</a></li>
 			<li><a href="#">Item 3</a></li>
 		</ul>
 	</nav>
 	<div class="navbar navbar-default navbar-fixed-top">
-		<a href="/" title="Watch it later" class="logotype">Watch it later</a>
-
 		<button type="button" class="navbar-toggle" style="display: block; float: left;" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
+
+		<a href="{{ url('/') }}" title="Watch it later" class="navbar-brand">Watch it later <small>(alpha)</small></a>
 	</div>
 
 	

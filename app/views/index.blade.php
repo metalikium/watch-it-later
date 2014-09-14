@@ -30,6 +30,10 @@
 			<p class="movie__genre">
 				%%movie.genre%%
 			</p>
+
+			<p>
+				<a href="#" ng-click="deleteMovie(movie.id)" class="text-muted"><i class="fa fa-trash-o"></i>&nbsp;Delete</a>
+			</p>
 		</li>
 	</ul>
 </div>
