@@ -25,6 +25,16 @@ Route::get('/', function()
 
 
 
+
+/**
+ * FORM
+ */
+Route::get('/create-movie', function() {
+	return View::make('form-create-movie');
+});
+
+
+
 /**
  * API ROUTES
  */

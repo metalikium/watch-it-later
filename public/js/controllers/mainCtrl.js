@@ -12,6 +12,20 @@ angular.module('mainCtrl', [])
 		// loading variable to show the spinning loading icon
 		$scope.loading = true;
 
+		// select options
+		var minYear = 1950;
+		var maxYear = new Date().getFullYear();
+		var listYears = [];
+
+		for (var i = minYear; i <= maxYear; i++) {
+			listYears.push({
+				'yearValue': i,
+				'yearName': i,
+			});
+		};
+
+		$scope.years = listYears;
+
 		// get all the movies first and bind it to the $scope.movies object
 		// use the function we created in our service
 		// GET ALL MOVIES ====================================================
