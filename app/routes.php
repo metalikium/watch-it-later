@@ -33,6 +33,9 @@ Route::get('/add-movie', function() {
 	return View::make('form-add-movie');
 });
 
+Route::get('/add-movie-api', function() {
+	return View::make('form-add-movie-api');
+});
 
 
 /**

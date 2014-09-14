@@ -12,11 +12,12 @@
 	<link rel="stylesheet" href="{{ asset('css/styles.css') }}" />
 	@show
 </head>
-<body ng-app="movieApp" ng-controller="mainController">
+<body ng-app="movieApp" ng-controller="mainCtrl">
 	<nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
 		<ul class="nav navmenu-nav">
 			<span class="navmenu-brand">Menu</span>
 			<li><a href="{{ url('/add-movie') }}"><i class="fa fa-film"></i>&nbsp;Add a Movie</a></li>
+			<li><a href="{{ url('/add-movie-api') }}"><i class="fa fa-film"></i>&nbsp;Add a Movie API</a></li>
 			<li><a href="#"><i class="fa fa-star"></i>&nbsp;Favorites</a></li>
 			<li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li>
 		</ul>
@@ -42,6 +43,7 @@
 	<script src="{{ asset('bower_components/angular/angular.min.js') }}"></script>
 	<script src="{{ asset('js/controllers/mainCtrl.js') }}"></script>
 	<script src="{{ asset('js/services/movieService.js') }}"></script>
+	<script src="{{ asset('js/services/omdbService.js') }}"></script>
 	<script src="{{ asset('js/app.js') }}"></script>
 	@show
 </body>
