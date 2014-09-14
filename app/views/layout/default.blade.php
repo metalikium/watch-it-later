@@ -16,9 +16,9 @@
 	<nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
 		<ul class="nav navmenu-nav">
 			<span class="navmenu-brand">Menu</span>
-			<li><a href="{{ url('/create-movie') }}"><span class="fa fa-film">Create Movie</span></a></li>
-			<li><a href="#">Item 2</a></li>
-			<li><a href="#">Item 3</a></li>
+			<li><a href="{{ url('/create-movie') }}"><i class="fa fa-film"></i>&nbsp;Add a Movie</a></li>
+			<li><a href="#"><i class="fa fa-star"></i>&nbsp;Favorites</a></li>
+			<li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li>
 		</ul>
 	</nav>
 	<div class="navbar navbar-default navbar-fixed-top">

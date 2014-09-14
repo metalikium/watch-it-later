@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 	<div class="page-header">
-		<h1>Create a movie</h1>
+		<h1>Add a movie</h1>
 	</div>
 
 	<p class="text-center" ng-show="loading"><span class="fa fa-refresh fa-spin fa-2x"></span></p>

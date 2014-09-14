@@ -29,8 +29,8 @@ Route::get('/', function()
 /**
  * FORM
  */
-Route::get('/create-movie', function() {
-	return View::make('form-create-movie');
+Route::get('/add-movie', function() {
+	return View::make('form-add-movie');
 });
 
 
