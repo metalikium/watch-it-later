@@ -11,20 +11,115 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "docs/application_details.md",
+			"settings":
+			{
+				"buffer_size": 995,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/database/seeds/MoviesTableSeeder.php",
+			"settings":
+			{
+				"buffer_size": 759,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/routes.php",
+			"settings":
+			{
+				"buffer_size": 1155,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/MovieController.php",
+			"settings":
+			{
+				"buffer_size": 1705,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/app.js",
+			"settings":
+			{
+				"buffer_size": 221,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/controllers/mainCtrl.js",
+			"settings":
+			{
+				"buffer_size": 1747,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/services/movieService.js",
+			"settings":
+			{
+				"buffer_size": 543,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n	<meta charset=\"UTF-8\">\n	<title>Movies</title>\n\n	<link rel=\"stylesheet\" href=\"{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}\" />\n	<link rel=\"stylesheet\" href=\"{{ asset('bower_components/font-awesome/css/font-awesome.min.css') }}\" />\n	<link rel=\"stylesheet\" href=\"{{ asset('bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css') }}\" />\n	<link rel=\"stylesheet\" href=\"{{ asset('css/styles.css') }}\" />\n</head>\n<body ng-app=\"movieApp\" ng-controller=\"mainController\">\n	<nav id=\"myNavmenu\" class=\"navmenu navmenu-default navmenu-fixed-left offcanvas\" role=\"navigation\">\n		<ul class=\"nav navmenu-nav\">\n			<span class=\"navmenu-brand\">Menu</span>\n			<li class =\"active\">Item 1</li>\n			<li>Item 2</li>\n			<li>Item 3</li>\n		</ul>\n	</nav>\n	<div class=\"navbar navbar-default navbar-fixed-top\">\n		<a href=\"/\" title=\"Watch it later\" class=\"logotype\">Watch it later</a>\n\n		<button type=\"button\" class=\"navbar-toggle\" style=\"display: block; float: left;\" data-toggle=\"offcanvas\" data-target=\"#myNavmenu\" data-canvas=\"body\">\n			<span class=\"icon-bar\"></span>\n			<span class=\"icon-bar\"></span>\n			<span class=\"icon-bar\"></span>\n		</button>\n	</div>\n\n	<div class=\"container\">\n		<div class=\"page-header\">\n			<h1>Movies list</h1>\n		</div>\n\n		<p class=\"text-center\" ng-show=\"loading\"><span class=\"fa fa-refresh fa-spin fa-2x\"></span></p>\n\n		<ul class=\"list\" ng-hide=\"loading\">\n			<li class=\"list__item  movie__item\" ng-repeat=\"movie in movies\">\n				<h3 class=\"movie__title\">%%movie.title%%</h3>\n				<span class=\"movie__year\">%%movie.year%%</span>\n\n				<img ng-src=\"%%movie.poster_url%%\" alt=\"%%movie.title%%\" />\n\n				<div class=\"movie__description\">\n					%%movie.description%%\n				</div>\n\n				<p class=\"movie__director\">\n					%%movie.director%%\n				</p>\n\n				<div class=\"movie__stars\">\n					%%movie.stars%%\n				</div>\n\n				<p class=\"movie__genre\">\n					%%movie.genre%%\n				</p>\n			</li>\n		</ul>\n	</div>\n\n	<script src=\"{{ asset('bower_components/jquery/dist/jquery.min.js') }}\"></script>\n	<script src=\"{{ asset('bower_components/bootstrap/dist/js/bootstrap.min.js') }}\"></script>\n	<script src=\"{{ asset('bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js') }}\"></script>\n	<script src=\"{{ asset('bower_components/angular/angular.min.js') }}\"></script>\n	<script src=\"{{ asset('js/controllers/mainCtrl.js') }}\"></script>\n	<script src=\"{{ asset('js/services/movieService.js') }}\"></script>\n	<script src=\"{{ asset('js/app.js') }}\"></script>\n</body>\n</html>",
+			"file": "app/views/index.blade.php",
+			"file_size": 2513,
+			"file_write_time": 1410701116000000,
+			"settings":
+			{
+				"buffer_size": 2514,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/sass/styles.scss",
+			"settings":
+			{
+				"buffer_size": 74,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 203.0,
+		"height": 339.0,
 		"selected_items":
 		[
 			[
-				"synjs",
-				"Set Syntax: JSON"
+				"synsc",
+				"Set Syntax: SCSS"
 			],
 			[
 				"insta",
 				"Package Control: Install Package"
+			],
+			[
+				"syncss",
+				"Set Syntax: CSS"
+			],
+			[
+				"synmark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"synma",
+				"Set Syntax: Markdown"
+			],
+			[
+				"synres",
+				"Set Syntax: reStructuredText"
+			],
+			[
+				"synjs",
+				"Set Syntax: JSON"
 			],
 			[
 				"listp",
@@ -92,13 +187,24 @@
 	},
 	"file_history":
 	[
+		"/Users/metalikium/sites/watch-it-later/public/css/styles.css",
+		"/Users/metalikium/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/metalikium/sites/watch-it-later/app/database/seeds/DatabaseSeeder.php",
+		"/Users/metalikium/sites/watch-it-later/public/index.php",
+		"/Users/metalikium/sites/watch-it-later/composer.json",
+		"/Users/metalikium/sites/watch-it-later/app/config/app.php",
+		"/Users/metalikium/sites/watch-it-later/app/models/Movie.php",
+		"/Users/metalikium/sites/watch-it-later/app/database/migrations/2014_09_13_112355_create_movies_table.php",
+		"/Users/metalikium/sites/watch-it-later/app/database/migrations/2014_09_13_124055_change_year_column_type.php",
+		"/Users/metalikium/sites/watch-it-later/app/config/local/database.php",
+		"/Users/metalikium/sites/watch-it-later/admin_infos.mdown",
+		"/Users/metalikium/sites/watch-it-later/admin_infos.rst",
 		"/Users/metalikium/sites/laravel/app/controllers/PhonesController.php",
 		"/etc/host",
 		"/Users/metalikium/sites/angularjs/angularjs.sublime-workspace",
 		"/Users/metalikium/sites/aeon/aeon.sublime-project",
 		"/Users/metalikium/sites/aeon/index.php",
 		"/Users/metalikium/sites/aeon/index.html",
-		"/Users/metalikium/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/metalikium/angularjs/index.html",
 		"/Users/metalikium/angularjs/bower_components/bootstrap/dist/css/bootstrap.min.css",
 		"/Users/metalikium/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
@@ -137,6 +243,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"loading",
+			"}}",
+			"{{",
+			"js",
+			"stars",
+			"director",
+			"description",
+			"year",
+			"id",
 			"start",
 			"span",
 			"task",
@@ -204,8 +319,250 @@
 	"groups":
 	[
 		{
+			"selected": 7,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "docs/application_details.md",
+					"settings":
+					{
+						"buffer_size": 995,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								985,
+								985
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/database/seeds/MoviesTableSeeder.php",
+					"settings":
+					{
+						"buffer_size": 759,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								429,
+								429
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/routes.php",
+					"settings":
+					{
+						"buffer_size": 1155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								972,
+								972
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/MovieController.php",
+					"settings":
+					{
+						"buffer_size": 1705,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								982,
+								982
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 32.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "public/js/app.js",
+					"settings":
+					{
+						"buffer_size": 221,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								219,
+								219
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "public/js/controllers/mainCtrl.js",
+					"settings":
+					{
+						"buffer_size": 1747,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1425,
+								1432
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 19.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "public/js/services/movieService.js",
+					"settings":
+					{
+						"buffer_size": 543,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								493,
+								493
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/views/index.blade.php",
+					"settings":
+					{
+						"buffer_size": 2514,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								736,
+								742
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "public/sass/styles.scss",
+					"settings":
+					{
+						"buffer_size": 74,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								72,
+								72
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -250,6 +607,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"config/app.php",
+				"app/config/app.php"
+			],
+			[
+				"composer",
+				"composer.json"
+			]
 		],
 		"width": 0.0
 	},
