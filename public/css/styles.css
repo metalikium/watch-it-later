@@ -1,5 +1,6 @@
 .container {
-  padding-top: 51px; }
+  padding-top: 51px;
+  padding-bottom: 2em; }
 
 /* Main nav */
 .navbar-toggle {
@@ -11,5 +12,10 @@
   font-size: 65%; }
 
 /* /Logotype */
+.media {
+  border-bottom: 1px solid #F0F0F0;
+  margin: 0;
+  padding-top: 1em;
+  padding-bottom: 1em; }
 
 /*# sourceMappingURL=styles.css.map */

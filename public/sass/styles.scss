@@ -1,5 +1,8 @@
 .container {
-	padding-top: 51px;
+	padding: {
+		top: 51px;
+		bottom: 2em;
+	}
 }
 
 /* Main nav */
@@ -14,3 +17,13 @@
 	font-size: 65%;
 }
 /* /Logotype */
+
+
+.media {
+	border-bottom: 1px solid #F0F0F0;
+	margin: 0;
+	padding: {
+		top: 1em;
+		bottom: 1em;
+	}
+}
