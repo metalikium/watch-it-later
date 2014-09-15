@@ -8,7 +8,7 @@
 
 	<p class="text-center" ng-show="loading"><span class="fa fa-refresh fa-spin fa-2x"></span></p>
 
-	<form ng-submit="submitMovie()">
+	<form ng-submit="submitMovie()" ng-hide="loading">
 		<!-- title -->
 		<div class="form-group">
 			<input type="text" class="form-control" name="title" ng-model="movieData.title" placeholder="Title" />

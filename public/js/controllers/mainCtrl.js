@@ -45,10 +45,8 @@ movieControllers.controller('mainCtrl', function($scope, $http, Movie) {
 		// use the function we created in our service
 		Movie.save($scope.movieData)
 			.success(function(data) {
-
 				// redirect to homepage
 				window.location = '/';
-
 			})
 			.error(function(data) {
 				console.log(data);
@@ -83,11 +81,26 @@ movieControllers.controller('omdbCtrl', function($scope, MovieAPI) {
 
 		MovieAPI.get(title)
 			.success(function(data) {
-				$scope.movies = data;
+				$scope.movie = data;
+
+				$scope.movieapi = {
+
+				};
 				$scope.loading = false;
-				console.log(data);
+				console.log('get data');
+				console.log($scope.movie);
+
+				MovieAPI.save($scope.movie)
+					.success(function(data) {
+						console.log('saved');
+					})
+					.error(function(data) {
+						console.log('couldnt save');
+						console.log(data);
+					});
 			})
 			.error(function(data) {
+				console.log('couldnt get');
 				console.log(data);
 			});
 	};

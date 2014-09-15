@@ -10,7 +10,7 @@
 
 	<div class="media" ng-hide="loading" ng-repeat="movie in movies">
 		<a class="pull-left" href="#">
-			<img class="media-object" src="{{ asset('img/default.gif') }}" ng-src="%%movie.poster_url%%" alt="%%movie.title%%" />
+			<img class="media-object" src="{{ asset('img/default.gif') }}" ng-src="%%movie.poster_url%%" alt="%%movie.title%%" width="125" />
 		</a>
 
 		<div class="media-body">

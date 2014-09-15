@@ -48,11 +48,13 @@ class MovieController extends \BaseController {
 		*/
 
 		Movie::create(array(
-			'title'       => Input::get('title'),
-			'year'        => Input::get('year'),
-			'description' => Input::get('description'),
-			'director'    => Input::get('director'),
-			'genre'       => Input::get('genre'),
+			'title'       => Input::get('Title'),
+			'year'        => Input::get('Year'),
+			'poster_url'  => Input::get('Poster'),
+			'description' => Input::get('Plot'),
+			'director'    => Input::get('Director'),
+			'stars'       => Input::get('Actors'),
+			'genre'       => Input::get('Genre'),
 		));
 
 		return Response::json(array('success' => true));
