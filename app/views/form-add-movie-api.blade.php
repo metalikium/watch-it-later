@@ -55,5 +55,9 @@
 			</p>
 		</div>
 	</div>
+
+	<div ng-show="emsg" class="alert alert-danger">
+		<p>%%movie.Error%%</p>
+	</div>
 </div>
 @stop

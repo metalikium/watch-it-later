@@ -62,6 +62,9 @@ movieControllers.controller('mainCtrl', function($scope, $http, Movie) {
 		Movie.destroy(id)
 			.success(function(data) {
 
+				console.log('destroy movie');
+				console.log(data);
+				
 				// if successful, we'll need to refresh the movie list
 				Movie.get()
 					.success(function(getData) {
@@ -78,6 +81,7 @@ movieControllers.controller('omdbCtrl', function($scope, MovieAPI) {
 
 	$scope.submitMovieApi = function(title) {
 		$scope.loading = true;
+		$scope.emsg = false;
 
 		MovieAPI.get(title)
 			.success(function(data) {
@@ -89,6 +93,9 @@ movieControllers.controller('omdbCtrl', function($scope, MovieAPI) {
 				$scope.loading = false;
 				console.log('get data');
 				console.log($scope.movie);
+				if ($scope.movie.Error) {
+					$scope.emsg = true;
+				}
 
 				MovieAPI.save($scope.movie)
 					.success(function(data) {

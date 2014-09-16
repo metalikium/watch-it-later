@@ -46,11 +46,32 @@ class MovieController extends \BaseController {
 		$filename           = $img->getClientOriginalName();		
 		$movie->poster_url  = $filename;
 		*/
+		
+		// omdb url pattern
+		// http://ia.media-imdb.com/images/M/MV5BMTc5OTk4MTM3M15BMl5BanBnXkFtZTgwODcxNjg3MDE@._V1_SX300.jpg
+		$omdb_poster_url = Input::get('Poster');
+		// retrieve filename
+		$url_array = explode('/', $omdb_poster_url);
+		$url_array_count = count($url_array);
+		$filename = $url_array[$url_array_count - 1];
+		// seperate name / extension
+		$filename_array = explode('.', $filename);
+		$filename_array_count = count($filename_array);
+		$name = sha1($filename_array[0]);
+		$ext = $filename_array[$filename_array_count - 1];
+		// poster_url
+		$path_img_dir = '/img/';
+		$poster_url = $path_img_dir.$name.'.'.$ext;
+		// save it
+		$destinationPath = public_path().$poster_url;
+        file_put_contents($destinationPath, file_get_contents($omdb_poster_url));
+
+
 
 		Movie::create(array(
 			'title'       => Input::get('Title'),
 			'year'        => Input::get('Year'),
-			'poster_url'  => Input::get('Poster'),
+			'poster_url'  => $poster_url,
 			'description' => Input::get('Plot'),
 			'director'    => Input::get('Director'),
 			'stars'       => Input::get('Actors'),
@@ -105,6 +126,23 @@ class MovieController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
+		// remove poster file
+		$posters_filename = DB::table('movies')->select('poster_url')->where('id', $id)->get();
+		foreach ($posters_filename as $p)
+		{
+			$poster_url = $p->poster_url;
+		}
+		/* debug
+		return Response::json(array(
+			'public_path'   => public_path(),
+			'filename_set'  => $posters_filename,
+			'filename'      => $poster_url,
+			'poster_path' => public_path().$poster_url
+		));
+		*/
+		File::delete(public_path().$poster_url);
+		
+		// remove movie entry from database
 		Movie::destroy($id);
 
 		return Response::json(array('success' => true));
