@@ -149,4 +149,13 @@ class MovieController extends \BaseController {
 	}
 
 
+	/**
+	 * Handle temporary movie poster
+	 */
+	public function moviePoster() {
+		$test = Input::all();
+		return Response::json(array('success' => $test));
+	}
+
+
 }

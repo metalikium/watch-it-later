@@ -48,6 +48,8 @@ Route::group(array('prefix' => 'api'), function()
 	// this ensures that a user can't access api/create or api/edit when there's nothing there
 	Route::resource('movies', 'MovieController',
 		array('except' => array('create', 'edit', 'update')));
+
+	Route::post('movies/poster', 'MovieController@moviePoster');
 });
 
 

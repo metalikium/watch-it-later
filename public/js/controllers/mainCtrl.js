@@ -96,6 +96,17 @@ movieControllers.controller('omdbCtrl', function($scope, MovieAPI) {
 				if ($scope.movie.Error) {
 					$scope.emsg = true;
 				}
+
+				// get poster url
+				console.log('$scope.movie.Poster : ' + $scope.movie.Poster);
+				MovieAPI.poster($scope.movie.Poster)
+					.success(function (data) {
+						console.log('ici');
+						console.log(data);
+					})
+					.error(function (data) {
+						console.log('la');
+					});
 			})
 			.error(function(data) {
 				console.log('couldnt get');
