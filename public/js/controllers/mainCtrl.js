@@ -79,37 +79,50 @@ movieControllers.controller('mainCtrl', function($scope, $http, Movie) {
 
 movieControllers.controller('omdbCtrl', function($scope, MovieAPI) {
 
-	$scope.submitMovieApi = function(title) {
+	$scope.movie = null;
+
+	$scope.findMovieApi = function(title) {
 		$scope.loading = true;
-		$scope.emsg = false;
+		$scope.emsg    = false;
 
 		MovieAPI.get(title)
 			.success(function(data) {
 				$scope.movie = data;
-
-				$scope.movieapi = {
-
-				};
 				$scope.loading = false;
+
 				console.log('get data');
 				console.log($scope.movie);
+
 				if ($scope.movie.Error) {
 					$scope.emsg = true;
 				}
-
-				MovieAPI.save($scope.movie)
-					.success(function(data) {
-						console.log('saved');
-					})
-					.error(function(data) {
-						console.log('couldnt save');
-						console.log(data);
-					});
 			})
 			.error(function(data) {
 				console.log('couldnt get');
 				console.log(data);
 			});
+	};
+
+
+
+	$scope.submitMovieApi = function() {
+		console.log($scope.movie);
+
+		MovieAPI.save($scope.movie)
+			.success(function(data) {
+				console.log('saved');
+			})
+			.error(function(data) {
+				console.log('couldnt save');
+				console.log(data);
+			});
+	};
+
+
+	$scope.resetForm = function () {
+		console.log('resetForm');
+		$scope.movie      = null;
+		$scope.movieTitle = null;
 	};
 
 });

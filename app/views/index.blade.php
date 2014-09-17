@@ -8,7 +8,7 @@
 
 	<p class="text-center" ng-show="loading"><span class="fa fa-refresh fa-spin fa-2x"></span></p>
 
-	<div class="media" ng-hide="loading" ng-repeat="movie in movies">
+	<div class="media" ng-hide="loading" ng-if="movies" ng-repeat="movie in movies">
 		<a class="pull-left" href="#">
 			<img class="media-object" src="{{ asset('img/default.gif') }}" ng-src="%%movie.poster_url%%" alt="%%movie.title%%" width="125" />
 		</a>
