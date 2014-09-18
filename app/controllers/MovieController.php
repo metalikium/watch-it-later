@@ -153,8 +153,24 @@ class MovieController extends \BaseController {
 	 * Handle temporary movie poster
 	 */
 	public function moviePoster() {
-		$test = Input::all();
-		return Response::json(array('success' => $test));
+		$omdb_poster_url = implode('', Input::all()); // why all() ?
+		// retrieve filename
+		$url_array = explode('/', $omdb_poster_url);
+		$url_array_count = count($url_array);
+		$filename = $url_array[$url_array_count - 1];
+		// seperate name / extension
+		$filename_array = explode('.', $filename);
+		$filename_array_count = count($filename_array);
+		$name = sha1($filename_array[0]);
+		$ext = $filename_array[$filename_array_count - 1];
+		// poster_url
+		$path_img_dir = '/img/tmp/';
+		$poster_url = $path_img_dir.$name.'.'.$ext;
+		// save it
+		$destinationPath = public_path().$poster_url;
+        file_put_contents($destinationPath, file_get_contents($omdb_poster_url));
+
+		return Response::json(array('poster' => $poster_url));
 	}
 
 

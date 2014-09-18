@@ -41,6 +41,8 @@
 	<script src="{{ asset('bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js') }}"></script>
 	<script src="{{ asset('bower_components/angular/angular.min.js') }}"></script>
+	<script src="{{ asset('bower_components/angular-bootstrap/ui-bootstrap.min.js') }}"></script>
+	<script src="{{ asset('bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js') }}"></script>
 	<script src="{{ asset('js/controllers/mainCtrl.js') }}"></script>
 	<script src="{{ asset('js/services/movieService.js') }}"></script>
 	<script src="{{ asset('js/services/omdbService.js') }}"></script>

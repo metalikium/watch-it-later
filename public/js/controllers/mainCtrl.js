@@ -13,6 +13,11 @@ movieControllers.controller('mainCtrl', function($scope, $http, Movie) {
 	// loading variable to show the spinning loading icon
 	$scope.loading = true;
 
+	// rating options
+	$scope.rate = 0;
+	$scope.max = 5;
+	$scope.isReadonly = false;
+
 	// select options
 	var minYear = 1950;
 	var maxYear = new Date().getFullYear();
@@ -34,6 +39,7 @@ movieControllers.controller('mainCtrl', function($scope, $http, Movie) {
 		.success(function(data) {
 			$scope.movies = data;
 			$scope.loading = false;
+			$scope.rate = data.note;
 		});
 
 	// function to handle submitting the form
@@ -73,6 +79,20 @@ movieControllers.controller('mainCtrl', function($scope, $http, Movie) {
 					});
 			});
 	};
+
+
+	// rating
+	$scope.hoveringOver = function(value) {
+		$scope.overStar = value;
+		$scope.percent = 100 * (value / $scope.max);
+	};
+
+	$scope.ratingMovie = function (rating, movieID) {
+		console.log( 'rating : ' + rating );
+		console.log( 'movieID : ' + movieID );
+	}
+	// end rating
+
 });
 
 
@@ -101,16 +121,17 @@ movieControllers.controller('omdbCtrl', function($scope, MovieAPI) {
 				console.log('$scope.movie.Poster : ' + $scope.movie.Poster);
 				MovieAPI.poster($scope.movie.Poster)
 					.success(function (data) {
-						console.log('ici');
-						console.log(data);
+						$scope.movie.Poster = data.poster;
 					})
 					.error(function (data) {
 						console.log('la');
+						$scope.emsg = true;
 					});
 			})
 			.error(function(data) {
 				console.log('couldnt get');
 				console.log(data);
+				$scope.emsg = true;
 			});
 	};
 
