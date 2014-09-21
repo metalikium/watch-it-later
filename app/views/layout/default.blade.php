@@ -46,6 +46,7 @@
 	<script src="{{ asset('js/controllers/mainCtrl.js') }}"></script>
 	<script src="{{ asset('js/services/movieService.js') }}"></script>
 	<script src="{{ asset('js/services/omdbService.js') }}"></script>
+	<script src="{{ asset('js/directives/movieDirective.js') }}"></script>
 	<script src="{{ asset('js/app.js') }}"></script>
 	@show
 </body>

@@ -39,7 +39,12 @@ movieControllers.controller('mainCtrl', function($scope, $http, Movie) {
 		.success(function(data) {
 			$scope.movies = data;
 			$scope.loading = false;
-			$scope.rate = data.note;
+			console.log( data );
+
+			for (var i = $scope.movies.length - 1; i >= 0; i--) {
+				$scope.rate = $scope.movies[i];
+				console.log( $scope.movies[i].note );
+			};
 		});
 
 	// function to handle submitting the form

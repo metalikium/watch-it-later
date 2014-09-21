@@ -33,16 +33,17 @@
 				%%movie.genre%%
 			</p>
 			
-			<!-- movie rating -->
-			<rating ng-model="rate" max="max" readonly="isReadonly" ng-click="ratingMovie(rate, movie.id)" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
-			<span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">%%percent%% %</span>
+			<!-- movie rating | bootstrap
+			<rating ng-model="rate" value="%%movie.note%%" max="max" ng-click="ratingMovie(rate, movie.id)"></rating>
 
 			<pre style="margin:15px 0;">Rate: <b>%%rate%%</b> - Readonly is: <i>%%isReadonly%%</i> - Hovering over: <b>%%overStar || "none"%%</b></pre>
-			<!-- /movie rating -->
+			/movie rating | bootstrap -->
+			
+			<rating note="movie.note" max="5"></rating>
 
 
 			<p>
-				<a href="#" ng-click="deleteMovie(movie.id)" class="text-muted"><i class="fa fa-trash-o"></i>&nbsp;Delete</a>
+				<a href="#" ng-click="deleteMovie(movie.id)" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i>&nbsp;Delete</a>
 			</p>
 		</div>
 	</div>
